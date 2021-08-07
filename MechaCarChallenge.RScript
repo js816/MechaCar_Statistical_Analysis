@@ -28,3 +28,24 @@ lot_summary <- coil_data %>%
             med = median(PSI),
             var = var(PSI),
             stdv = sd(PSI))
+
+
+# Deliverable 3
+
+# 1 Running t test to determine if the PSI across all lots is different from the population mean 1500 PSI
+t.test(coil_data$PSI, mu=1500)
+
+# 2
+# Using subset() function to get data for each lot
+lot1_data = subset(coil_data, Manufacturing_Lot == "Lot1")
+lot2_data = subset(coil_data, Manufacturing_Lot == "Lot2")
+lot3_data = subset(coil_data, Manufacturing_Lot == "Lot3")
+
+# Running t test to compare Lot1 to population mean 1500 PSI
+t.test(lot1_data$PSI, mu=1500)
+
+# Running t test to compare Lot2 to population mean 1500 PSI
+t.test(lot2_data$PSI, mu=1500)
+
+# Running t test to compare Lot3 to population mean 1500 PSI
+t.test(lot3_data$PSI, mu=1500)
