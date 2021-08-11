@@ -1,8 +1,14 @@
+# Project Overview
+
+## Purpose
+
+The purpose of this project was to perform statistical testing on AutosRUs data in R.  This project performed a linear regression to understand factors impacting fuel efficiency in MechaCar, the newest prototype.  Additionally, suspension coil data was analyzed and various summary statistics were generated to compare to standards.  Finally, a study design was developed for future consideration. 
+
 # Results
 
 ## Linear Regression to Predict MPG
 
-The linear regression of the MechaCar_mpg.csv file shows that there are factors that are statistically significant to the Miles per Gallon (MPG) dependent variable.  As shown in the results below, the following variables had p-values < 0.05:  vehicle length and ground clearance.  Additionally, the y-intercept had a p-value of < 0.05.  Thus, the evidence supports that these factors have a meaningful impact on MPG values.
+The linear regression of the MechaCar_mpg.csv file shows there are factors that are statistically significant to the Miles per Gallon (MPG) dependent variable.  As shown in the results below, the following variables had p-values < 0.05:  vehicle length and ground clearance.  Additionally, the y-intercept had a p-value of < 0.05.  Thus, the evidence supports that these factors have a meaningful impact on MPG values.
 
 The other factors, vehicle weight, spoiler angle, and all wheel drive (AWD), had p-values > 0.05.  Thus, the evidence supports that any impact of these factors upon MPG is not statistically significant.
 
@@ -18,7 +24,7 @@ Also, because the y-intercept is statistically significant, there may be other k
 
 ## Summary Statistics on Suspension Coils
 
-The suspension coil data was analyzed.  Summary statistics were generated on the entire dataset.  The table below shows the overall summary in PSI.
+The suspension coil data was analyzed.  Summary statistics were generated on the entire dataset.  The table below shows the overall summary in pounds per square inch (PSI).
 
 ![Total_summary](https://user-images.githubusercontent.com/82730954/128612774-7fef9ef0-7569-41cd-ba7e-2fa3c69f50a7.PNG)
 
@@ -45,13 +51,13 @@ A t-test was performed to compare the mean of all coils tested in the dataset to
 
 ### Lot 1
 
-Next a t-test was performed comparing Lot 1 to the overall population.  The resulting p-value, as shown below, was 1.  The mean of Lot 1 and the overall population were both 1500.  Thus, the null hypothesis is supported by the testing.
+Next, a t-test was performed comparing Lot 1 to the overall population.  The resulting p-value, as shown below, was 1.  The mean of Lot 1 and the overall population were both 1500.  Thus, the null hypothesis is supported by the testing.
 
 ![Lot1](https://user-images.githubusercontent.com/82730954/128612799-dfb85a8e-a449-4625-820e-f58c7def3f15.PNG)
 
 ### Lot 2
 
-Next a t-test was performed comparing Lot 2 to the overall population.  The p-value, shown below, was 0.61, which supports the null hypothesis.  The testing supports that the difference seen is a result of random chance.
+Next, a t-test was performed comparing Lot 2 to the overall population.  The p-value, shown below, was 0.61, which supports the null hypothesis.  The testing supports that the difference seen is a result of random chance.
 
 ![Lot2](https://user-images.githubusercontent.com/82730954/128612807-df5effba-b175-4ff0-8769-e4ef5ca86dc7.PNG)
 
@@ -69,13 +75,13 @@ It is suggested that we evaluate and compare the following factors to compare ou
 * Street price (superior to MSRP which can differ from actual cost)
 * Combined fuel economy (per EPA guidelines, weighting the city fuel economy by 55% and the highway fuel economy by 45%)
 * Maintenance costs
-* Horse power
+* Horsepower
 * Reliability ratings
-* NHTSA safety ratings
+* National Highway Traffic Safety Administration (NHTSA) safety ratings
 * Design and styling ratings
 
 The null hypothesis is that if there are no differences between all vehicles studied then no statistical variance will be seen in metrics measured.  The alternative hypothesis is that if MechaCars are superior to those of our closest competitors, statistical superiority will be seen in multiple metrics measured.  It is suggested that the significance level be set at 0.05.
 
-After studying and compiling the data, ANOVA should be performed to determine if statistical differences are observed. Additionally, the metrics should be visualized allowing us to see qualitatively how MechaCars compared to the competition.
+After studying and compiling the data, an ANOVA should be performed to determine if statistical differences are observed. Additionally, the metrics should be visualized allowing us to see qualitatively how MechaCars compared to the competition.
 
-It might also be valuable to predetermine a method of developing an index encapsulating all of the above metrics to allow an overall 
+It might also be valuable to predetermine a method of developing an index encapsulating all of the above metrics to allow easier comparisons.
